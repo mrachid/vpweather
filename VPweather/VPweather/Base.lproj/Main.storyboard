@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VPweather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-dk-gFs"/>
+                            <tableView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-oB-LxG">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weatherCell" rowHeight="79" id="fTY-Tl-VjR" customClass="WeatherTableViewCell" customModule="VPweather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fTY-Tl-VjR" id="k9n-j9-reI">
+                                            <frame key="frameInset" width="343" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zqH-0z-kCW">
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-Ik-t5G">
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-Lk-cgz">
+                                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="infoLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAL-NO-xQg">
+                                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-Ox-8eB">
+                                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zqH-0z-kCW" secondAttribute="bottom" id="6Od-ES-qMb"/>
+                                                <constraint firstItem="zqH-0z-kCW" firstAttribute="top" secondItem="k9n-j9-reI" secondAttribute="topMargin" id="78F-cS-7Xj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zqH-0z-kCW" secondAttribute="trailing" id="DXJ-55-x8O"/>
+                                                <constraint firstItem="zqH-0z-kCW" firstAttribute="leading" secondItem="k9n-j9-reI" secondAttribute="leadingMargin" id="Dw2-ge-fD2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="yYD-Lk-cgz" id="kaU-bH-bgX"/>
+                                            <outlet property="infoLabel" destination="lAL-NO-xQg" id="K0G-oh-JLc"/>
+                                            <outlet property="temperatureLabel" destination="Sbv-Ox-8eB" id="oEn-aa-oLz"/>
+                                            <segue destination="fVI-t3-tSl" kind="show" identifier="weatherDetail" id="BXF-Bp-LO6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uYs-CU-7hq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tCz-0I-B71"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MTI-TY-IR7">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klK-Ul-aOJ">
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="60"/>
+                                        <color key="textColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="légères pluies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ked-fJ-EPq">
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <color key="textColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvv-I1-0wQ">
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lXn-oB-LxG" secondAttribute="bottom" constant="8" symbolic="YES" id="KZ7-0U-2UZ"/>
+                            <constraint firstItem="GmS-dk-gFs" firstAttribute="centerX" secondItem="lXn-oB-LxG" secondAttribute="centerX" id="QuK-Mx-SZ4"/>
+                            <constraint firstItem="MTI-TY-IR7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="XM5-dv-9FB"/>
+                            <constraint firstItem="GmS-dk-gFs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xnt-an-tdd"/>
+                            <constraint firstItem="GmS-dk-gFs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fmC-4E-tHG"/>
+                            <constraint firstAttribute="trailing" secondItem="GmS-dk-gFs" secondAttribute="trailing" id="sbc-qo-kbX"/>
+                            <constraint firstItem="lXn-oB-LxG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tUC-QO-gqs"/>
+                            <constraint firstItem="lXn-oB-LxG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="uJi-yV-MhX"/>
+                            <constraint firstItem="MTI-TY-IR7" firstAttribute="centerX" secondItem="lXn-oB-LxG" secondAttribute="centerX" id="vfY-QZ-pcH"/>
+                            <constraint firstItem="GmS-dk-gFs" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="x5M-aB-fau"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="ked-fJ-EPq" id="osj-sS-YPR"/>
+                        <outlet property="tableView" destination="lXn-oB-LxG" id="CLL-e0-R6M"/>
+                        <outlet property="temperatureLabel" destination="jvv-I1-0wQ" id="tL5-Ga-kX4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="138.98050974512745"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="cE3-nL-sc2">
+            <objects>
+                <viewController id="tnF-UV-EkN" customClass="WeatherDetailsViewController" customModule="VPweather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sdf-qM-fn6"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7N-dW-Ja3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ku-6l-rh0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paysage_neige" translatesAutoresizingMaskIntoConstraints="NO" id="UO9-Uv-HFT"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4b1-Tp-MoH">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gde-dC-qlR">
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="50"/>
+                                        <color key="textColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="légères pluies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDN-vG-n92">
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX3-Yx-0oS">
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="70"/>
+                                        <color key="textColor" red="0.19683593749999995" green="0.19683593749999995" blue="0.19683593749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="deG-aX-x6I">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uNa-DW-Gpz">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C Max :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-Rt-FND">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidité :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HG-v7-Iwg">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vent :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-QL-NRd">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuages :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOR-e0-nFd">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau mer :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-J0-ASJ">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau sol :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-Nt-DPF">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="htP-H1-mfA">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVP-lJ-rgo">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="humidityLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-AI-obN">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="windLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-mn-6fC">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cloudsLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhU-eY-VD6">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seaLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFr-zS-4vk">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="groundLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-7h-uvs">
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ucx-yW-gmR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="5Yc-fZ-dpa"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bOr-Q1-VQx">
+                                    <size key="itemSize" width="85" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weatherCollectionCell" id="agH-x1-Fjn" customClass="WeatherCollectionViewCell" customModule="VPweather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="4" width="85" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frE-8k-ldZ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cww-Fo-aNO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <color key="textColor" red="0.97694467309999999" green="0.0" blue="0.57863908350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBf-qw-BPP">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="qBn-h1-soA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZM-gR-hgE"/>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="QBf-qw-BPP" firstAttribute="leading" secondItem="agH-x1-Fjn" secondAttribute="leading" id="FEz-WT-NM2"/>
+                                            <constraint firstItem="AZM-gR-hgE" firstAttribute="leading" secondItem="agH-x1-Fjn" secondAttribute="leadingMargin" constant="16" id="KRU-av-kon"/>
+                                            <constraint firstItem="frE-8k-ldZ" firstAttribute="top" secondItem="agH-x1-Fjn" secondAttribute="top" id="L7s-0e-f90"/>
+                                            <constraint firstItem="frE-8k-ldZ" firstAttribute="leading" secondItem="QBf-qw-BPP" secondAttribute="leading" id="TgX-IS-x5H"/>
+                                            <constraint firstItem="QBf-qw-BPP" firstAttribute="centerX" secondItem="AZM-gR-hgE" secondAttribute="centerX" id="bW1-za-ZBE"/>
+                                            <constraint firstItem="AZM-gR-hgE" firstAttribute="top" secondItem="frE-8k-ldZ" secondAttribute="bottom" constant="12" id="cnv-07-GhN"/>
+                                            <constraint firstItem="QBf-qw-BPP" firstAttribute="top" secondItem="AZM-gR-hgE" secondAttribute="bottom" constant="12" id="dOO-pv-1MI"/>
+                                            <constraint firstAttribute="bottom" secondItem="QBf-qw-BPP" secondAttribute="bottom" id="j0x-lM-LwA"/>
+                                            <constraint firstItem="frE-8k-ldZ" firstAttribute="trailing" secondItem="QBf-qw-BPP" secondAttribute="trailing" id="jHd-5x-qiW"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="AZM-gR-hgE" secondAttribute="trailing" constant="15" id="kzq-wQ-HTt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="AZM-gR-hgE" id="TgN-uQ-Gqd"/>
+                                            <outlet property="tempLabel" destination="QBf-qw-BPP" id="Wpo-ho-sN3"/>
+                                            <outlet property="timeLabel" destination="frE-8k-ldZ" id="QcO-K6-mwB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="tnF-UV-EkN" id="Idu-EA-lhB"/>
+                                    <outlet property="delegate" destination="tnF-UV-EkN" id="EOx-gs-sRi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UO9-Uv-HFT" secondAttribute="trailing" id="1KM-Xu-CyX"/>
+                            <constraint firstItem="Ucx-yW-gmR" firstAttribute="centerX" secondItem="4b1-Tp-MoH" secondAttribute="centerX" id="3n9-f4-NAz"/>
+                            <constraint firstItem="Ucx-yW-gmR" firstAttribute="top" secondItem="deG-aX-x6I" secondAttribute="bottom" constant="30" id="3yo-3v-qRj"/>
+                            <constraint firstItem="4b1-Tp-MoH" firstAttribute="top" secondItem="Sdf-qM-fn6" secondAttribute="bottom" constant="8" id="40a-PV-fNT"/>
+                            <constraint firstItem="UO9-Uv-HFT" firstAttribute="leading" secondItem="4ku-6l-rh0" secondAttribute="leading" id="51C-pC-FDo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4b1-Tp-MoH" secondAttribute="trailing" id="9C4-R4-1LE"/>
+                            <constraint firstItem="UO9-Uv-HFT" firstAttribute="top" secondItem="4ku-6l-rh0" secondAttribute="top" id="ODv-VX-Oy2"/>
+                            <constraint firstItem="4b1-Tp-MoH" firstAttribute="leading" secondItem="4ku-6l-rh0" secondAttribute="leadingMargin" id="PSY-tt-QGE"/>
+                            <constraint firstItem="p7N-dW-Ja3" firstAttribute="top" secondItem="Ucx-yW-gmR" secondAttribute="bottom" constant="92" id="ber-k8-dFA"/>
+                            <constraint firstItem="deG-aX-x6I" firstAttribute="leading" secondItem="4ku-6l-rh0" secondAttribute="leadingMargin" constant="74" id="ckX-BP-pzB"/>
+                            <constraint firstItem="UO9-Uv-HFT" firstAttribute="bottom" secondItem="p7N-dW-Ja3" secondAttribute="top" id="lpf-qR-9Hu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="deG-aX-x6I" secondAttribute="trailing" constant="74" id="onA-1o-vLc"/>
+                            <constraint firstItem="Ucx-yW-gmR" firstAttribute="leading" secondItem="4ku-6l-rh0" secondAttribute="leadingMargin" id="qdg-j9-0EX"/>
+                            <constraint firstItem="deG-aX-x6I" firstAttribute="top" secondItem="4b1-Tp-MoH" secondAttribute="bottom" constant="20" id="svM-nH-943"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RPA-ZP-Nql">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="I86-kJ-vos">
+                            <color key="tintColor" red="0.544921875" green="0.544921875" blue="0.544921875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="closeModal:" destination="tnF-UV-EkN" id="V2P-9F-6nC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cloudsLabel" destination="IhU-eY-VD6" id="LWA-cv-Bq2"/>
+                        <outlet property="collectionView" destination="Ucx-yW-gmR" id="tCl-un-qfH"/>
+                        <outlet property="describLabel" destination="HDN-vG-n92" id="hVj-6d-Atr"/>
+                        <outlet property="groundLabel" destination="xJY-7h-uvs" id="LW1-e5-kIH"/>
+                        <outlet property="humidityLabel" destination="3iM-AI-obN" id="ASO-iv-Ech"/>
+                        <outlet property="maxLabel" destination="iVP-lJ-rgo" id="8sO-zl-eOB"/>
+                        <outlet property="seaLabel" destination="JFr-zS-4vk" id="Dw8-FU-iQn"/>
+                        <outlet property="tempLabel" destination="TX3-Yx-0oS" id="tVQ-wp-gvB"/>
+                        <outlet property="windLabel" destination="EHH-mn-6fC" id="lEZ-Bn-kIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Sx-aT-beC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719.2" y="139.880059970015"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zdS-j5-T6f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fVI-t3-tSl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="go2-QH-ZL5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tnF-UV-EkN" kind="relationship" relationship="rootViewController" id="cmj-vH-EWN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPf-CX-Zgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="139.880059970015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg3" width="683" height="1024"/>
+        <image name="paysage_neige" width="930" height="627"/>
+    </resources>
+</document>
