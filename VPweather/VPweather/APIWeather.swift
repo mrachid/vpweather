@@ -128,7 +128,7 @@ class APIWeather {
             do{
                 try self.managedObjectContext?.save()
             }catch let error{
-                print(error)
+                print("ERREUR SAVE CONTEXT : \(error)")
             }
         })
         
@@ -143,7 +143,7 @@ class APIWeather {
             do{
                 try self.managedObjectContext?.save()
             }catch let error{
-                print(error)
+                print("ERREUR SAVE CONTEXT : \(error)")
             }
         })
     }

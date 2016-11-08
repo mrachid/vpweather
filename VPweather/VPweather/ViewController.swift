@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -49,7 +48,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(apiWeather.listWeathers.count)
         return apiWeather.listWeathers.count
     }
     

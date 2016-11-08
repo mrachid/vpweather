@@ -18,8 +18,8 @@
 		8F4E7D141DD14E9F004E8E2A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E7D121DD14E9F004E8E2A /* Model.xcdatamodeld */; };
 		8F4E7D171DD14FFF004E8E2A /* WeatherEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E7D151DD14FFF004E8E2A /* WeatherEntity+CoreDataClass.swift */; };
 		8F4E7D181DD14FFF004E8E2A /* WeatherEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E7D161DD14FFF004E8E2A /* WeatherEntity+CoreDataProperties.swift */; };
-		8F5558F41DD21AE200E0EEC2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5558F31DD21AE200E0EEC2 /* Alamofire.framework */; };
-		8F5558F51DD21AE200E0EEC2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5558F31DD21AE200E0EEC2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F5558FD1DD21F8700E0EEC2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5558FC1DD21F8700E0EEC2 /* Alamofire.framework */; };
+		8F5558FE1DD21F8700E0EEC2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5558FC1DD21F8700E0EEC2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F9805551DD11765000DD85F /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9805541DD11765000DD85F /* WeatherDetailsViewController.swift */; };
 		8F9805571DD126D3000DD85F /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9805561DD126D3000DD85F /* WeatherCollectionViewCell.swift */; };
 		8FA21D2B1DD0E70000355A03 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA21D2A1DD0E70000355A03 /* WeatherTableViewCell.swift */; };
@@ -32,7 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8F5558F51DD21AE200E0EEC2 /* Alamofire.framework in Embed Frameworks */,
+				8F5558FE1DD21F8700E0EEC2 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 		8F4E7D131DD14E9F004E8E2A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8F4E7D151DD14FFF004E8E2A /* WeatherEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WeatherEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8F4E7D161DD14FFF004E8E2A /* WeatherEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WeatherEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8F5558F31DD21AE200E0EEC2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5558FC1DD21F8700E0EEC2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9805541DD11765000DD85F /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		8F9805561DD126D3000DD85F /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		8FA21D2A1DD0E70000355A03 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A25DD5696578DB7719C005 /* Pods_VPweather.framework in Frameworks */,
-				8F5558F41DD21AE200E0EEC2 /* Alamofire.framework in Frameworks */,
+				8F5558FD1DD21F8700E0EEC2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 		8F452FA81DD087DC00599C5E = {
 			isa = PBXGroup;
 			children = (
-				8F5558F31DD21AE200E0EEC2 /* Alamofire.framework */,
+				8F5558FC1DD21F8700E0EEC2 /* Alamofire.framework */,
 				8F452FB31DD087DC00599C5E /* VPweather */,
 				8F452FB21DD087DC00599C5E /* Products */,
 				E9CF75B4FA6A3ADA41921E76 /* Pods */,

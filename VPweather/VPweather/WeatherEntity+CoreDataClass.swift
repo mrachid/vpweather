@@ -72,7 +72,9 @@ public class WeatherEntity: NSManagedObject
             for weatherInfo in queryResuls {
                  context.delete(weatherInfo)
             }
-        } catch _ {
+        } catch let error {
+            print("CLEAR DATABASE ERREUR : \(error)")
+
         }
     }
     
