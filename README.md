@@ -2,5 +2,4 @@
 
 Weather with OpenWeatherMap API
 
-git clone the repos and open VPweather.xcworkspace
-run project
+git clone the repos, open VPweather.xcworkspace and run the project
