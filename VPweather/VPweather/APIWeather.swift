@@ -14,7 +14,7 @@ import CoreData
 class APIWeather {
 
     // PROPERTIES POUR LA REQUEST
-    private let apiKey = "e2ddeda508cace03406abd493ef0dfbf"
+    private let apiKey = ""
     private let lang = "fr"
     private let units = "metric"
     private let city = "Paris"
