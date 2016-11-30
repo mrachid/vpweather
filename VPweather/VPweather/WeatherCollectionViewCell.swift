@@ -13,4 +13,21 @@ class WeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    
+    var weatherInfo : Weather?{
+        didSet{
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
+        if let obj = weatherInfo{
+            tempLabel.text = String(obj.temperatur)
+            iconImageView.image = UIImage(named: obj.icon)
+            
+            let date = obj.time.components(separatedBy: ":")
+            timeLabel.text = date.first! + "h"
+        }
+        
+    }
 }

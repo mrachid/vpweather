@@ -29,7 +29,22 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
         super.viewDidLoad()
         
         collectionView.backgroundColor = UIColor.clear
+        updateUI()
+    }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (weathers?.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.WeatherCollectionCellIdentifier, for: indexPath) as? WeatherCollectionViewCell
+        
+        cell?.weatherInfo = weathers?[indexPath.row]
+        
+        return cell!
+    }
+    
+    func updateUI() {
         if let weather = weathers?.first{
             tempLabel.text = String(weather.temperatur)
             describLabel.text = weather.description
@@ -41,24 +56,6 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
             groundLabel.text = String(weather.grndlvl) + " hPa"
         }
         
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (weathers?.count)!
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.WeatherCollectionCellIdentifier, for: indexPath) as? WeatherCollectionViewCell
-        
-        if let obj = weathers?[indexPath.row]{
-            cell?.tempLabel.text = String(obj.temperatur)
-            cell?.iconImageView.image = UIImage(named: obj.icon)
-            
-            let date = obj.time.components(separatedBy: ":")
-            cell?.timeLabel.text = date.first! + "h"
-        }
-        
-        return cell!
     }
     
     @IBAction func closeModal(_ sender: AnyObject) {

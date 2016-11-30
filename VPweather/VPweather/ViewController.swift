@@ -55,11 +55,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StoryBoard.WeatherTableViewCellIdentifier, for: indexPath) as? WeatherTableViewCell
         
-        if let obj = apiWeather.listWeathers[indexPath.row].sectionObjects.first{
-            cell?.dateLabel.text = apiWeather.dateFormatDisplay(data: obj)
-            cell?.infoLabel.text = obj.description
-            cell?.temperatureLabel.text = String(obj.temperatur)
-        }
+        cell?.weatherInfo = apiWeather.listWeathers[indexPath.row].sectionObjects.first
+        
         return cell!
     }
     
