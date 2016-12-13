@@ -16,6 +16,7 @@ extension WeatherEntity {
         return NSFetchRequest<WeatherEntity>(entityName: "WeatherEntity");
     }
 
+    //  MARK - All Properties in DataBase (CoreData) 
     @NSManaged public var descriptions: String?
     @NSManaged public var temp: Int64
     @NSManaged public var tempMax: Int64

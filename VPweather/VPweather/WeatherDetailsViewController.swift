@@ -10,12 +10,9 @@ import UIKit
 
 class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    
+    //  MARK - Properties
     @IBOutlet weak var collectionView: UICollectionView!
-    var weathers : [Weather]?
-    private struct StoryBoard {
-        static let WeatherCollectionCellIdentifier = "weatherCollectionCell"
-    }
-
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var describLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
@@ -25,6 +22,14 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
     @IBOutlet weak var seaLabel: UILabel!
     @IBOutlet weak var groundLabel: UILabel!
     
+    var weathers : [Weather]?
+    
+    //  MARK - Identifier View
+    private struct StoryBoard {
+        static let WeatherCollectionCellIdentifier = "weatherCollectionCell"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +37,7 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
         updateUI()
     }
 
+    //  MARK - Collection Protocol
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (weathers?.count)!
     }
@@ -44,6 +50,7 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
         return cell!
     }
     
+    //  MARK - Update Data for Display in view
     func updateUI() {
         if let weather = weathers?.first{
             tempLabel.text = String(weather.temperatur)
@@ -58,6 +65,7 @@ class WeatherDetailsViewController: UIViewController, UICollectionViewDelegate, 
         
     }
     
+    //  MARK - Action for close Modal
     @IBAction func closeModal(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }

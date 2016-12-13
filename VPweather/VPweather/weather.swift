@@ -11,6 +11,10 @@ import SwiftyJSON
 
 class Weather {
     
+    //
+    //  MARK - PROPERTIES FOR CLASS
+    //
+    
     var description : String
     var temperatur : Int
     var humidity : Double
@@ -23,8 +27,13 @@ class Weather {
     var grndlvl : Double
     var tempMax : Int
     var icon : String
-    
-    
+
+
+    //
+    //  MARK - Init Class
+    //
+
+    //  Init class with data (JSON) from OpenWeatherMap
     init(data : JSON) {
         
         description = data["weather"][0]["description"].stringValue
@@ -44,6 +53,7 @@ class Weather {
         
     }
     
+    //  Init class with with properties
     init(description : String, temperatur : Int, humidity : Double, wind : Double, clouds : Int, date : String, time : String, timestamp : Double, sealvl : Double, grndlvl : Double, tempMax : Int, icon : String){
         self.description = description
         self.temperatur = temperatur

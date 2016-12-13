@@ -20,9 +20,10 @@ class WeatherCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    //  MARK - Update Collection Cell View
     func updateUI() {
         if let obj = weatherInfo{
-            tempLabel.text = String(obj.temperatur)
+            tempLabel.text = String(obj.temperatur) + "°"
             iconImageView.image = UIImage(named: obj.icon)
             
             let date = obj.time.components(separatedBy: ":")

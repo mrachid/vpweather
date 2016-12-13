@@ -22,12 +22,13 @@ class WeatherTableViewCell: UITableViewCell {
         }
     }
     
+    //  MARK - Update TableView Cell View
     func updateUI() {
         
         if let info = weatherInfo {
             dateLabel.text = apiWeather.dateFormatDisplay(data: info)
             infoLabel.text = info.description
-            temperatureLabel.text = String(info.temperatur)
+            temperatureLabel.text = String(info.temperatur) + "°"
         }
         
     }

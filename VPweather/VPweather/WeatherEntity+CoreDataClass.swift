@@ -12,6 +12,8 @@ import CoreData
 
 public class WeatherEntity: NSManagedObject
 {
+    
+    //  MARK - Add weather in dataBase
     class func addAllWeathersInDatabase(weather : Weather, inManagedObjectContext context : NSManagedObjectContext) {
         
         if let entity = NSEntityDescription.insertNewObject(forEntityName: "WeatherEntity", into: context) as? WeatherEntity {
@@ -30,7 +32,7 @@ public class WeatherEntity: NSManagedObject
         }
     }
     
-    
+    //  MARK - Get all Weather from DataBase
     class func getAllWeatherFromDatabase(inManagedObjectContext context : NSManagedObjectContext) -> [Weather]? {
         var weathersDatabase : [Weather] = []
         
@@ -63,6 +65,7 @@ public class WeatherEntity: NSManagedObject
         }
     }
     
+    //  MARK - Clear all DataBase
     class func deleteAllWeatherFromDatabase(inManagedObjectContext context : NSManagedObjectContext) {
         
         let request : NSFetchRequest<WeatherEntity> = NSFetchRequest(entityName: "WeatherEntity")
