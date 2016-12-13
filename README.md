@@ -1,6 +1,8 @@
 # vpweather
 
-VPWeather application méteo  de Paris avec l'Api OpenWeatherMap:
+VPWeather application méteo  de Paris avec l'Api OpenWeatherMap
+
+- VIEWS:
   - Vue principal, affiche la méteo de l'instant présent et affiche une liste des météos des jours suivants
   - Vue secondaire, affiche en détails la météo du jour choisie.
 
