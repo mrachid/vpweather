@@ -7,8 +7,9 @@ VPWeather application méteo  de Paris avec l'Api OpenWeatherMap
   - Vue secondaire, affiche en détails la météo du jour choisie.
 
 - ENVIRONNEMENT:
-  - SWIFT 3 XCODE 8
-  - BDD (CoreData) et API(OpenWeatherMap)
+  - SWIFT 3
+  - XCODE 8
+  - BDD (CoreData) & API(OpenWeatherMap)
   - Architecture MVC
 
 - COCOAPODS:
